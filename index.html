@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+    <link rel="stylesheet" href="dist/main.css">
+    <title>Webpack 2 Basics</title>
+</head>
+<body>
+
+    <div id="topper">
+        <div class="header">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand brandlogo" href="#">Gustava</a>
+
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navCollapse" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navCollapse">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">SHOP</a>
+                            </li>
+                            <li>
+                                <a href="#">RECIPES</a>
+                            </li>
+                            <li>
+                                <a href="#">NEWS</a>
+                            </li>
+                            <li>
+                                <a href="#">ABOUT GUSTAVA</a>
+                            </li>
+                            <li>
+                                <a href="#">CONTACT</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="presentation">
+            <h1>Gustava</h1>
+            <h3>ITALLIAN SPECIALITIES</h3>
+        </div>
+    </div>
+
+    <div id="secondtopper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12 greyAround" style="padding:0px"></div>
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" style="padding:0px">
+                    <div class="reservationsBeerWindow">
+                        <h3>Reservations</h3>
+                        <p>Call us now to book a table in our restaurant. Calls must be in the same day as the reservation.</p>
+                        <a href="#" id="buttonBook">BOOK A TABLE</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12" style="padding:0px">
+                    <div id="courtyard"></div>
+                </div>
+                <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12 greyAround lower" style="padding:0px"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-1 col-sm-1  col-xs-12 greyAround lower" style="padding:0px"></div>
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" style="padding:0px">
+                    <div id="beerImg">
+
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12" style="padding:0px">
+                    <div class="reservationsBeerWindow beerImg">
+                        <h3>About</h3>
+                        <p>Gustava restaurant was open by award winning Chef Luciano Santo to offer residents and visitors of
+                            southern Brooklyn with the authentic italian cuisine that the Gustava name has become synonymous
+                            with after the succes of the Gustava restaurant in Las Vegas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-1 col-sm-1 col-xs-12 greyAround " style="padding:0px"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="thirdtopper">
+        <h1>OUR SPECIALITIES</h2>
+    </div>
+    <div id="specialities"></div>
+
+
+
+
+
+
+
+<script src="dist/bundle.js"></script>
+</body>
+</html>

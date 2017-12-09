@@ -1,0 +1,141 @@
+@import "colors";
+
+@font-face {
+  font-family: crystal;
+  src: url(/src/fonts/crystalsymphony.ttf);
+}
+$mygrey: #F5F3EF;
+//rgb(252, 247, 247);
+$mywhite: rgb(241, 231, 231);
+$secondfont: "Allerta Stencil";
+$thirdfont: "Helvetica";
+$myblack: rgb(117, 108, 108);
+$golden:#B39877;
+
+#topper {
+  background-image: linear-gradient(rgba(97, 98 ,116 , .1), rgba(97, 98 ,116 , 1)),url(/src/images/restaurantimg.jpg);
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .header {
+    .brandlogo {
+      font-family: crystal;
+      font-size: 50px;
+      margin-top: 30px;
+      color: $mywhite;
+      text-decoration: underline;
+    }
+    .navbar {
+      background-color: transparent;
+      background: transparent;
+      border-color: transparent;
+    }
+    li {
+      font-family: $secondfont;
+      font-size: 15px;
+      a {
+        color: $mywhite;
+      }
+    }
+  }
+  #presentation {
+    text-align: center;
+    color: $mywhite;
+
+    h1 {
+      font-family: crystal;
+      font-size: 100px;
+      text-shadow: 0.03em 0 black, 0 0.03em black, -0.04em 0 black,
+        0 -0.03em black;
+    }
+    h3 {
+      font-family: Helvetica;
+      text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
+        0 -0.06em black;
+      font-size: 30px;
+      letter-spacing: 8px;
+      font-weight: bold;
+    }
+  }
+}
+
+#secondtopper {
+  .reservationsBeerWindow {
+    height: 200px;
+    text-align: center;
+    h3 {
+      font-family: crystal;
+      font-size: 40px;
+      color: #343434;
+      margin: 0px;
+      position: relative;
+      top:20px;
+      font-weight: bold;
+    }
+    p {
+      font-family: $thirdfont;
+      margin: 0px;
+      color: $myblack;
+      position: relative;
+      top:30px;
+      margin: 0px 20px;
+    }
+    a {
+      text-decoration: none;
+      color: $golden;
+      border: solid $golden;
+      padding: 5px 10px;
+      font-family: $thirdfont;
+      font-weight: bold;
+      letter-spacing: 2px;
+      position: relative;
+      top:70px;
+    }
+  }
+  #courtyard {
+    background-image: url("/src/images/restaurantcourt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+  }
+  .greyAround {
+    background-color: $mygrey;
+    height: 200px;
+    @media (max-width: 768px) {
+      height: 50px;
+    }
+  }
+  #beerImg {
+    background-image: url("/src/images/restaurantbeer.jpg");
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: 768px) {
+    .lower{
+    height: 25px;
+    }
+  }
+}
+
+#thirdtopper{
+  height: 400px;
+  background-image: url(/src/images/table.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1{
+    text-align: center;
+    position: relative;
+    margin: 0px;
+    top:50%;
+    color: $mywhite;
+    font-family: Helvetica;
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
+    0 -0.06em black;
+  }
+}
