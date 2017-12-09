@@ -13,7 +13,7 @@ $myblack: rgb(117, 108, 108);
 $golden:#B39877;
 
 #topper {
-  background-image: linear-gradient(rgba(97, 98 ,116 , .1), rgba(97, 98 ,116 , 1)),url(/src/images/restaurantimg.jpg);
+  background-image: linear-gradient(rgba(97, 98 ,116 , .1), rgba(97, 98 ,116 , 1)),url("/src/images/restaurantimg.jpg");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -123,7 +123,7 @@ $golden:#B39877;
 
 #thirdtopper{
   height: 400px;
-  background-image: url(/src/images/table.jpg);
+  background-image: url("/src/images/table.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   h1{
