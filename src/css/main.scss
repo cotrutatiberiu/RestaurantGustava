@@ -11,6 +11,7 @@ $secondfont: "Allerta Stencil";
 $thirdfont: "Helvetica";
 $myblack: rgb(117, 108, 108);
 $golden:#B39877;
+$hblack:#424040;
 
 #topper {
   background-image: linear-gradient(rgba(97, 98 ,116 , .1), rgba(97, 98 ,116 , 1)),url("/src/images/restaurantimg.jpg");
@@ -68,7 +69,7 @@ $golden:#B39877;
     h3 {
       font-family: crystal;
       font-size: 40px;
-      color: #343434;
+      color: $hblack;
       margin: 0px;
       position: relative;
       top:20px;
@@ -138,4 +139,45 @@ $golden:#B39877;
     text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
     0 -0.06em black;
   }
+}
+
+#specialities{
+  .specialitiesGrey{
+    background-color: $mygrey;
+    height: 170px;
+  }
+  .lasagna{
+    background-image: url("/src/images/lasagna.jpg");
+  }
+  .eggplant{
+    background-image: url("/src/images/eggplant.jpeg");
+  }
+  .baricole{
+    background-image: url("/src/images/baricole.jpg");
+  }
+  .meatballs{
+    background-image: url("/src/images/meat.jpeg")
+  }
+  .imageWindow{
+    background-size:cover;
+    height: 170px;
+  }
+  .text{
+    text-align: center;
+    height: 170px;
+    h3{
+      color: $hblack;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    p{
+      color: $myblack;
+      font-size: 13px;
+    }
+    h4{
+      color: $golden;
+      font-weight: 600;
+    }
+  }
+
 }
