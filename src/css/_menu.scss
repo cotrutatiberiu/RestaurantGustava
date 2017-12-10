@@ -1,0 +1,29 @@
+#menucontainer
+ {
+    
+    background-image: url("/src/images/menutable.jpg"); 
+    height: 1000px;
+    .header {
+        .brandlogo {
+          font-family: crystal;
+          font-size: 50px;
+          margin-top: 30px;
+          color: $mywhite;
+          text-decoration: underline;
+        }
+        .navbar {
+          background-color: transparent;
+          background: transparent;
+          border-color: transparent;
+        }
+        li {
+          font-family: $secondfont;
+          font-size: 15px;
+          a {
+            color: $mywhite;
+            text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
+            0 -0.06em black;
+          }
+        }
+      }
+}

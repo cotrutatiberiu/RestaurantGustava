@@ -1,5 +1,6 @@
 @import "colors";
 @import "fonts";
+@import "menu";
 
 @font-face {
   font-family: crystal;
@@ -35,6 +36,8 @@
       font-size: 15px;
       a {
         color: $mywhite;
+        text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
+        0 -0.06em black;
       }
     }
   }
