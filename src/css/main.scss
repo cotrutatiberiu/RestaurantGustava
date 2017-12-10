@@ -1,20 +1,17 @@
 @import "colors";
+@import "fonts";
 
 @font-face {
   font-family: crystal;
   src: url(/src/fonts/crystalsymphony.ttf);
 }
-$mygrey: #F5F3EF;
-//rgb(252, 247, 247);
-$mywhite: rgb(241, 231, 231);
-$secondfont: "Allerta Stencil";
-$thirdfont: "Helvetica";
-$myblack: rgb(117, 108, 108);
-$golden:#B39877;
-$hblack:#424040;
 
-#topper {
-  background-image: linear-gradient(rgba(97, 98 ,116 , .1), rgba(97, 98 ,116 , 1)),url("/src/images/restaurantimg.jpg");
+#restaurantImageContainer {
+  background-image: linear-gradient(
+      rgba(97, 98, 116, 0.1),
+      rgba(97, 98, 116, 1)
+    ),
+    url("/src/images/restaurantimg.jpg");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -52,7 +49,7 @@ $hblack:#424040;
         0 -0.03em black;
     }
     h3 {
-      font-family: Helvetica;
+      font-family: $thirdfont;
       text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
         0 -0.06em black;
       font-size: 30px;
@@ -62,7 +59,7 @@ $hblack:#424040;
   }
 }
 
-#secondtopper {
+#reservationsAboutContainer {
   .reservationsBeerWindow {
     height: 200px;
     text-align: center;
@@ -70,9 +67,8 @@ $hblack:#424040;
       font-family: crystal;
       font-size: 40px;
       color: $hblack;
-      margin: 0px;
+      margin-top: 15px;
       position: relative;
-      top:20px;
       font-weight: bold;
     }
     p {
@@ -80,7 +76,6 @@ $hblack:#424040;
       margin: 0px;
       color: $myblack;
       position: relative;
-      top:30px;
       margin: 0px 20px;
     }
     a {
@@ -92,7 +87,6 @@ $hblack:#424040;
       font-weight: bold;
       letter-spacing: 2px;
       position: relative;
-      top:70px;
     }
   }
   #courtyard {
@@ -116,33 +110,35 @@ $hblack:#424040;
     background-repeat: no-repeat;
   }
   @media (max-width: 768px) {
-    .lower{
-    height: 25px;
+    .lower {
+      height: 25px;
     }
   }
 }
 
-#thirdtopper{
+#specialitiesImageSector {
   height: 400px;
   background-image: url("/src/images/table.jpg");
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  h1{
+  h1 {
     text-align: center;
     position: relative;
     margin: 0px;
-    top:50%;
+    top: 50%;
     color: $mywhite;
-    font-family: Helvetica;
+    font-family: $thirdfont;
     letter-spacing: 10px;
     font-weight: bold;
     text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
-    0 -0.06em black;
+      0 -0.06em black;
   }
 }
 
-#specialities{
-  .specialitiesGrey{
+#specialitiesMenuSector {
+  .specialitiesGrey {
     background-color: $mygrey;
     height: 170px;
     @media (max-width: 991px) {
@@ -152,49 +148,64 @@ $hblack:#424040;
       height: 50px;
     }
   }
-  .lasagna{
+  .lasagna {
     background-image: url("/src/images/lasagna.jpg");
   }
-  .eggplant{
+  .eggplant {
     background-image: url("/src/images/eggplant.jpeg");
   }
-  .baricole{
+  .baricole {
     background-image: url("/src/images/baricole.jpg");
   }
-  .meatballs{
-    background-image: url("/src/images/meat.jpeg")
+  .meatballs {
+    background-image: url("/src/images/meat.jpeg");
   }
-  .imageWindow{
-    background-size:cover;
+  .imageWindow {
+    background-size: cover;
     background-repeat: no-repeat;
     height: 170px;
   }
-  .text{
+  .text {
     text-align: center;
     height: 170px;
-    h4{
+    h4 {
       color: $hblack;
       font-weight: 700;
       letter-spacing: 2px;
     }
-    p{
+    p {
       color: $myblack;
       font-size: 13px;
+      margin: 0px 5px;
     }
-    h5{
+    h5 {
       color: $golden;
       font-weight: 600;
     }
   }
   @media (max-width: 991px) {
-    .specialitiesLower{
-    height: 25px;
+    .specialitiesLower {
+      height: 25px;
     }
   }
   @media (max-width: 768px) {
-    .specialitiesLower{
-    height: 25px;
+    .specialitiesLower {
+      height: 25px;
     }
   }
+}
 
+#ingredientsImageSector {
+  height: 400px;
+  background-image: url("/src/images/ingredients.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#menu{
+  height: 1000px;
+  background-image: url("/src/images/menutable.jpg");
+  background-size: cover;
 }
