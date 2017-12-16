@@ -1,4 +1,4 @@
 import '../css/main.scss';
-import { RandomGenerator } from './random-generator';
+import { Food } from './classes/food';
 
 console.log("asd");
