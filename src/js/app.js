@@ -1,4 +1,6 @@
 import '../css/main.scss';
-import { Food } from './classes/food';
+import { fleet } from './data';
+import { DataService } from "./services/data-service";
 
-console.log("asd");
+let dataService=new DataService();
+dataService.loadData(fleet);
