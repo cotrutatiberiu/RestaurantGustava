@@ -15,7 +15,7 @@ export class DataService {
         for (let data of fleet) {
             switch (data.type) {
                 case "pasta":
-                    let pasta=new Food(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);
+                    let pasta=new Food();
                     this.pasta.push(pasta);  
                 case "secondi":
                     this.secondi.push(data)

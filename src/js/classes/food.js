@@ -1,6 +1,6 @@
-import { Nutritonal } from "./nutritional";
+import { Nutritional } from "./nutritional";
 
-export class Food extends Nutritonal {
+export class Food extends Nutritional {
     constructor(calories,fat,saturates,protein,salt,carbs,sugar,fibre,alergyDetails,tag,type,name,description,price,category){
         super(calories,fat,saturates,protein,salt,carbs,sugar,fibre,alergyDetails,tag);
         this.type=type;
