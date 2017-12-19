@@ -23,7 +23,7 @@ export class DataService {
           this.pasta.push(pasta);
           break;
         case "secondi":
-          let secondi =this.loadFood(data);
+          let secondi = this.loadFood(data);
           this.secondi.push(secondi);
           break;
       }
@@ -52,13 +52,40 @@ export class DataService {
   printData(element) {
     let menuCon = document.getElementById("menucontainer");
     for (let elem of element) {
-      var d = document.createElement("div");
-      var h = document.createElement("h2");
-      h.style.color = "white";
-      var text = document.createTextNode(elem.name);
-      h.appendChild(text);
-      d.appendChild(h);
-      menuCon.appendChild(d);
+      //Creating elements
+      var divElem = document.createElement("div");
+      var h4Elem = document.createElement("h4");
+      var h5Elem = document.createElement("h5");
+      var pElem = document.createElement("p");
+
+      var linkInfo = document.createElement("a");
+      var spanInfo = document.createElement("span");
+      spanInfo.className = "glyphicon glyphicon-info-sign";
+
+      //Style elements
+      h4Elem.style.color = "white";
+      h5Elem.style.color = "white";
+      pElem.style.color = "white";
+
+      //Assign element content
+      var titleText = document.createTextNode(elem.name);
+      var priceText = document.createTextNode(elem.price);
+      var descriptionText = document.createTextNode(elem.description);
+
+      //Appending elements
+      h4Elem.appendChild(titleText);
+      h5Elem.appendChild(priceText);
+      pElem.appendChild(descriptionText);
+
+      linkInfo.appendChild(spanInfo);
+
+      /* div */
+      divElem.appendChild(h4Elem);
+      divElem.appendChild(h5Elem);
+      divElem.appendChild(pElem);
+      divElem.appendChild(linkInfo);
+
+      menuCon.appendChild(divElem);
     }
   }
 }
