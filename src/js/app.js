@@ -1,18 +1,9 @@
 import '../css/main.scss';
-import { RandomGenerator } from './random-generator';
+import { fleet } from './data';
+import { DataService } from "./services/data-service";
 
-const outputParagraph = document.querySelector('#outputParagraph');
-
-const outputRandomInt = () => {
-    outputParagraph.textContent = RandomGenerator.randomInteger();
-};
-
-const outputRandomRange = () => {
-    outputParagraph.textContent = RandomGenerator.randomRange(1, 500);
-};
-
-const buttonRndInt = document.querySelector('#randomInt');
-const buttonRndRange = document.querySelector('#randomRange');
-
-buttonRndInt.addEventListener('click', outputRandomInt);
-buttonRndRange.addEventListener('click', outputRandomRange);
+let dataService=new DataService();
+dataService.loadData(fleet);
+dataService.printData(dataService.pasta);
+dataService.printData(dataService.secondi);
+console.log(dataService.pasta);
