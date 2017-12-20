@@ -48,5 +48,6 @@ export class Menu {
         }
       }
     }
+    console.log(intakeData.antipasti);
   }
 }
