@@ -134,6 +134,40 @@ export let fleet=[
         fibre:3,
         alergyDetails:"Contains milk, egg, garlic, mustard",
         tag:["Gutten free"]
+    },
+    {
+        type:"pizza",
+        name:"CARAMELLE",
+        description:"Served with chargrilled portobello mushrooms, green salad, a side & a sauce of your choice: Creamy porcini; Herby garlic butter; Balsamic onion",
+        price:"16.95$",
+        category:"pasta",
+        calories:748,
+        fat:45,
+        saturates:25,
+        protein:80,
+        salt:10,
+        carbs:52,
+        sugar:23,
+        fibre:3,
+        alergyDetails:"Contains milk, egg, garlic, mustard",
+        tag:["Gutten free"]
+    },
+    {
+        type:"antipasti",
+        name:"ROOM CARAMELLE",
+        description:"Served with chargrilled portobello mushrooms, green salad, a side & a sauce of your choice: Creamy porcini; Herby garlic butter; Balsamic onion",
+        price:"16.95$",
+        category:"pasta",
+        calories:748,
+        fat:45,
+        saturates:25,
+        protein:80,
+        salt:10,
+        carbs:52,
+        sugar:23,
+        fibre:3,
+        alergyDetails:"Contains milk, egg, garlic, mustard",
+        tag:["Gutten free"]
     }
 
 ]

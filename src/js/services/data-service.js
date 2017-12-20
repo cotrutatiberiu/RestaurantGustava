@@ -26,6 +26,10 @@ export class DataService {
           let secondi = this.loadFood(data);
           this.secondi.push(secondi);
           break;
+          case "pizza":
+          let pizza = this.loadFood(data);
+          this.secondi.push(pizza);
+          break;
       }
     }
   }

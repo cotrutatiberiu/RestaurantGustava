@@ -23,10 +23,30 @@ export class Menu {
     }
     function fadeOutNavbar() {
       leftMenuNavbar.style.display = "inline";
-      let testal = document.getElementsByClassName("test")[0];
-      testal.addEventListener("click", () => {
-        intakeData.printData(intakeData.pasta);
-      });
+      let testal = document.getElementsByClassName("liclass");
+      for (let i of testal) {
+        switch (i.accessKey) {
+          case "antipasti":
+            i.addEventListener("click", () => {
+              intakeData.printData(intakeData.antipasti);
+            });
+          case "pasta":
+            i.addEventListener("click", () => {
+              intakeData.printData(intakeData.pasta);
+            });
+            break;
+          case "secondi":
+            i.addEventListener("click", () => {
+              intakeData.printData(intakeData.secondi);
+            });
+            break;
+          case "pizza":
+            i.addEventListener("click", () => {
+              intakeData.printData(intakeData.pizza);
+            });
+            break;
+        }
+      }
     }
   }
 }
