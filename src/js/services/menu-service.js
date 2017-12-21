@@ -6,7 +6,7 @@ export class Menu {
     let secondiCon = document.getElementById("secondiContainer");
     let pizzaCon = document.getElementById("pizzaContainer");
 
-    let menuPicturesElem=document.getElementById("menupictures");
+    let menuPicturesElem = document.getElementById("menupictures");
 
     let leftMenuNavbar = document.getElementById("leftMenu");
 
