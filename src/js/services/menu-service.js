@@ -5,7 +5,6 @@ export class Menu {
     let pastaCon = document.getElementById("pastaContainer");
     let secondiCon = document.getElementById("secondiContainer");
     let pizzaCon = document.getElementById("pizzaContainer");
-    
 
     let leftMenuNavbar = document.getElementById("leftMenu");
 
@@ -14,6 +13,7 @@ export class Menu {
     for (let elem of array) {
       elem.addEventListener("click", fadeInElements);
       elem.addEventListener("click", fadeOutNavbar);
+      elem.addEventListener("click", showItems);
     }
 
     function fadeInElements() {
@@ -22,33 +22,60 @@ export class Menu {
       secondiCon.style.display = "none";
       pizzaCon.style.display = "none";
     }
-    function fadeOutNavbar() {
+    // function fadeOutNavbar(element) {
+    //   leftMenuNavbar.style.display = "inline";
+    //   let testal = document.getElementsByClassName("liclass");
+    //   for (let i = 0; i < testal.length; i++) {
+    //     switch (testal[i].accessKey) {
+    //       case "antipasti":
+    //         testal[i].addEventListener("click", () => {
+    //           intakeData.printData(intakeData.antipasti);
+    //         });
+    //         break;
+    //       case "pasta":
+    //         testal[i].addEventListener("click", () => {
+    //           intakeData.printData(intakeData.pasta);
+    //         });
+    //         break;
+    //       case "secondi":
+    //         testal[i].addEventListener("click", () => {
+    //           intakeData.printData(intakeData.secondi);
+    //         });
+    //         break;
+    //       case "pizza":
+    //         testal[i].addEventListener("click", () => {
+    //           intakeData.printData(intakeData.pizza);
+    //         });
+    //         break;
+    //     }
+    //   }
+    // }
+    function showItems(event) {
+      this.event=event;
       leftMenuNavbar.style.display = "inline";
-      let testal = document.getElementsByClassName("liclass");
-      for (let i = 0; i < testal.length; i++) {
-        switch (testal[i].accessKey) {
-          case "antipasti":
-            testal[i].addEventListener("click", () => {
-              intakeData.printData(intakeData.antipasti);
-            });
-            break;
-          case "pasta":
-            testal[i].addEventListener("click", () => {
-              intakeData.printData(intakeData.pasta);
-            });
-            break;
-          case "secondi":
-            testal[i].addEventListener("click", () => {
-              intakeData.printData(intakeData.secondi);
-            });
-            break;
-          case "pizza":
-            testal[i].addEventListener("click", () => {
-              intakeData.printData(intakeData.pizza);
-            });
-            break;
-        }
+      switch (event.target.id) {
+        case "antipastiContainer":
+          intakeData.printData(intakeData.antipasti);
+          this.event.target.accessKey="true";
+          break;
+        case "pastaContainer":
+          intakeData.printData(intakeData.pasta);
+          this.event.target.accessKey="true";
+          break;
+        case "secondiContainer":
+          intakeData.printData(intakeData.secondi);
+          this.event.target.accessKey="true";
+          break;
+        case "pizzaContainer":
+          intakeData.printData(intakeData.pizza);
+          this.event.target.accessKey="true";
+          break;
       }
+      fadeOutNavbar();
+      
+    }
+    function fadeOutNavbar(eventTrigger){
+      console.log(eventTrigger);
     }
   }
 }
