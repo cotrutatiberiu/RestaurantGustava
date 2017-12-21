@@ -5,6 +5,4 @@ import { Menu } from "./services/menu-service";
 
 let dataService=new DataService();
 dataService.loadData(fleet);
-// dataService.printData(dataService.pasta);
-// dataService.printData(dataService.secondi);
 let createMenu=new Menu(dataService);

@@ -1,62 +1,52 @@
-#menucontainer
- {
-    
-    background-image: url("/src/images/menutable.jpg"); 
+#menucontainer {
+    background-image: url("/src/images/menutable.jpg");
     height: 1000px;
     .header {
         .brandlogo {
-          font-family: crystal;
-          font-size: 50px;
-          margin-top: 30px;
-          color: $mywhite;
-          text-decoration: underline;
+            font-family: crystal;
+            font-size: 50px;
+            margin-top: 30px;
+            color: $mywhite;
+            text-decoration: underline;
         }
         .navbar {
-          background-color: transparent;
-          background: transparent;
-          border-color: transparent;
+            background-color: transparent;
+            background: transparent;
+            border-color: transparent;
         }
         li {
-          font-family: $secondfont;
-          font-size: 15px;
-          a {
-            color: $mywhite;
-            text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
-            0 -0.06em black;
-          }
+            font-family: $secondfont;
+            font-size: 15px;
+            a {
+                color: $mywhite;
+                text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black, 0 -0.06em black;
+            }
         }
-      }
-      .windowP{
-        height: 300px;
-        width: 300px;
-        background-size: cover;
-      }
-      #antipastiContainer{
-
-      }
-      #pastaContainer{
-
-      }
-      #secondiContainer{
-
-      }
-      #pizzaContainer{
-
-      }
-      #contorniContainer{
-
-      }
-      #desertsContainer{
-
-      }
-      #kidsContainer{
-
-      }
-      #drinksContainer{
-
-        
-      }
-      #leftList {
+    }
+    #leftList {
         list-style-type: none;
-      }
+    }
+    #menupictures {
+        .menuPicture {
+            height: 100%;
+            padding: 0px;
+            .windowP {
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                margin:0px;
+                h3{
+                  margin:0px;
+                }
+            }
+        }
+        #antipastiContainer {}
+        #pastaContainer {}
+        #secondiContainer {}
+        #pizzaContainer {}
+        #contorniContainer {}
+        #desertsContainer {}
+        #kidsContainer {}
+        #drinksContainer {}
+    }
 }

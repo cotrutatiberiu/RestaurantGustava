@@ -6,6 +6,8 @@ export class Menu {
     let secondiCon = document.getElementById("secondiContainer");
     let pizzaCon = document.getElementById("pizzaContainer");
 
+    let menuPicturesElem=document.getElementById("menupictures");
+
     let leftMenuNavbar = document.getElementById("leftMenu");
 
     let array = [antipastiCon, pastaCon, secondiCon, pizzaCon];
@@ -17,45 +19,13 @@ export class Menu {
     }
 
     function fadeInElements() {
-      antipastiCon.style.display = "none";
-      pastaCon.style.display = "none";
-      secondiCon.style.display = "none";
-      pizzaCon.style.display = "none";
+      menuPicturesElem.style.display = "none";
     }
-    // function fadeOutNavbar(element) {
-    //   leftMenuNavbar.style.display = "inline";
-    //   let testal = document.getElementsByClassName("liclass");
-    //   for (let i = 0; i < testal.length; i++) {
-    //     switch (testal[i].accessKey) {
-    //       case "antipasti":
-    //         testal[i].addEventListener("click", () => {
-    //           intakeData.printData(intakeData.antipasti);
-    //         });
-    //         break;
-    //       case "pasta":
-    //         testal[i].addEventListener("click", () => {
-    //           intakeData.printData(intakeData.pasta);
-    //         });
-    //         break;
-    //       case "secondi":
-    //         testal[i].addEventListener("click", () => {
-    //           intakeData.printData(intakeData.secondi);
-    //         });
-    //         break;
-    //       case "pizza":
-    //         testal[i].addEventListener("click", () => {
-    //           intakeData.printData(intakeData.pizza);
-    //         });
-    //         break;
-    //     }
-    //   }
-    // }
     function showItems(event) {
       this.event = event;
       leftMenuNavbar.style.display = "inline";
       switch (event.target.id) {
         case "antipastiContainer":
-
           intakeData.printData(intakeData.antipasti);
           break;
         case "pastaContainer":

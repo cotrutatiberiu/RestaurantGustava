@@ -53,8 +53,7 @@ export class DataService {
     );
     return food;
   }
-  printData(element,checked) {
-    this.checked=checked;
+  printData(element) {
     let table = document.getElementById("table");
     for (let elem of element) {
       //Creating elements
