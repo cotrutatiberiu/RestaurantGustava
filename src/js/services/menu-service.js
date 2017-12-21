@@ -12,7 +12,6 @@ export class Menu {
 
     for (let elem of array) {
       elem.addEventListener("click", fadeInElements);
-      elem.addEventListener("click", fadeOutNavbar);
       elem.addEventListener("click", showItems);
     }
 
@@ -51,31 +50,22 @@ export class Menu {
     //   }
     // }
     function showItems(event) {
-      this.event=event;
+      this.event = event;
       leftMenuNavbar.style.display = "inline";
       switch (event.target.id) {
         case "antipastiContainer":
           intakeData.printData(intakeData.antipasti);
-          this.event.target.accessKey="true";
           break;
         case "pastaContainer":
           intakeData.printData(intakeData.pasta);
-          this.event.target.accessKey="true";
           break;
         case "secondiContainer":
           intakeData.printData(intakeData.secondi);
-          this.event.target.accessKey="true";
           break;
         case "pizzaContainer":
           intakeData.printData(intakeData.pizza);
-          this.event.target.accessKey="true";
           break;
       }
-      fadeOutNavbar();
-      
-    }
-    function fadeOutNavbar(eventTrigger){
-      console.log(eventTrigger);
     }
   }
 }
