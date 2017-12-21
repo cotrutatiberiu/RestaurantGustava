@@ -55,7 +55,7 @@ export class DataService {
   }
   printData(element,checked) {
     this.checked=checked;
-    let menuCon = document.getElementById("menucontainer");
+    let table = document.getElementById("table");
     for (let elem of element) {
       //Creating elements
       var divElem = document.createElement("div");
@@ -89,8 +89,7 @@ export class DataService {
       divElem.appendChild(h5Elem);
       divElem.appendChild(pElem);
       divElem.appendChild(linkInfo);
-
-      menuCon.appendChild(divElem);
+      table.appendChild(divElem);
     }
   }
 }
