@@ -1,6 +1,6 @@
+@import "fonts";
+@import "colors";
 #menucontainer {
-    background-image: url("/src/images/menutable.jpg");
-    height: 1000px;
     .header {
         .brandlogo {
             font-family: crystal;
@@ -36,17 +36,15 @@
                 background-size: cover;
                 margin:0px;
                 h3{
-                  margin:0px;
+                  font-size: 35px;
+                  margin:0px 0px 0px 20px;
+                  font-family: $secondfont;
+                  color: $hblack;
                 }
             }
         }
-        #antipastiContainer {}
-        #pastaContainer {}
-        #secondiContainer {}
-        #pizzaContainer {}
-        #contorniContainer {}
-        #desertsContainer {}
-        #kidsContainer {}
-        #drinksContainer {}
+        a{
+            text-decoration: none;
+        }
     }
 }

@@ -91,4 +91,7 @@ export class DataService {
       table.appendChild(divElem);
     }
   }
+  sortData(type,tag){
+    
+  }
 }

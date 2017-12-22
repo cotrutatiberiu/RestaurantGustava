@@ -15,7 +15,7 @@
 
 <body>
 
-    <div id="menucontainer">
+    <div id="menucontainer" style="background-image: url(/src/images/menutable.jpg);background-size:cover">
         <div class="header">
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
@@ -83,8 +83,12 @@
                     <div class="col-lg-2 col-md-2 col-sm-1 col-xs-12 "></div>
                 </div>
 
+                <div class="row" style="height:30px">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menuPicture"></div>
+                </div>
+
                 <div class="row" style="height:300px">
-                    <div class="col-lg-2 col-md-2 col-sm-1 col-xs-12 menuPicture"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-1 col-xs-12"></div>
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 menuPicture">
                         <a href="#">
                             <div id="secondiContainer" class="windowP" style="background-image:url(src/images/menu/secondi.jpg)">
@@ -121,7 +125,18 @@
                     <a href="#">Pizza</a>
                 </li>
             </ul>
+
+            <div id="sorting" style="color:white">
+                <label class="radio-inline"><input type="radio" name="optradio" class="radioButton">Vegetarian</label>
+                <label class="radio-inline"><input type="radio" name="optradio" class="radioButton">Vegan</label>
+                <label class="radio-inline"><input type="radio" name="optradio" class="radioButton">Gluten free</label>
+                <label class="radio-inline"><input type="radio" name="optradio" class="radioButton">Healthy</label>
+                <label class="radio-inline"><input type="radio" name="optradio" class="radioButton">Dairy free</label>
+            </div>
+
         </div>
+
+
 
         <div id="table">
 

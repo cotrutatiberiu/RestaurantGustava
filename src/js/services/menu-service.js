@@ -35,43 +35,49 @@ export class Menu {
           intakeData.printData(intakeData.secondi);
           break;
         case "pizzaContainer":
-
           intakeData.printData(intakeData.pizza);
           break;
       }
     }
     function fadeOutNavbar() {
-      let testal = document.getElementsByClassName("liclass");
-      let test = document.getElementById("table");
-      for (let i = 0; i < testal.length; i++) {
-        switch (testal[i].accessKey) {
+      let liElem = document.getElementsByClassName("liclass");
+      let tableElem = document.getElementById("table");
+      for (let i = 0; i < liElem.length; i++) {
+        switch (liElem[i].accessKey) {
           case "antipasti":
-            testal[i].addEventListener("click", () => {
-              test.innerHTML = "";
+            liElem[i].addEventListener("click", () => {
+              tableElem.innerHTML = "";
               intakeData.printData(intakeData.antipasti);
             });
             break;
           case "pasta":
-            testal[i].addEventListener("click", () => {
-              test.innerHTML = "";
+            liElem[i].addEventListener("click", () => {
+              tableElem.innerHTML = "";
               intakeData.printData(intakeData.pasta);
             });
             break;
           case "secondi":
-            testal[i].addEventListener("click", () => {
-              test.innerHTML = "";
+            liElem[i].addEventListener("click", () => {
+              tableElem.innerHTML = "";
               intakeData.printData(intakeData.secondi);
             });
             break;
           case "pizza":
-            testal[i].addEventListener("click", () => {
-
-              test.innerHTML = "";
+            liElem[i].addEventListener("click", () => {
+              tableElem.innerHTML = "";
               intakeData.printData(intakeData.pizza);
             });
             break;
         }
       }
     }
+
+
+
+    let radioElem = document.getElementsByClassName("radioButton");
+    for(var check of radioElem){
+      check.addEventListener("click",sortData);
+    }
+
   }
 }
