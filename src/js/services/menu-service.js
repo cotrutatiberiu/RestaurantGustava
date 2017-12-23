@@ -8,6 +8,8 @@ export class Menu {
 
     let menuPicturesElem = document.getElementById("menupictures");
 
+    let radioElem = document.getElementsByClassName("radioButton");
+
     let leftMenuNavbar = document.getElementById("leftMenu");
 
     let array = [antipastiCon, pastaCon, secondiCon, pizzaCon];
@@ -28,15 +30,19 @@ export class Menu {
         case "antipastiContainer":
           intakeData.printData(intakeData.antipasti);
           // intakeData.sortData(intakeData.antipasti, "Vegan");
+          callSort(intakeData.antipasti);
           break;
         case "pastaContainer":
           intakeData.printData(intakeData.pasta);
+          callSort(intakeData.pasta);
           break;
         case "secondiContainer":
           intakeData.printData(intakeData.secondi);
+          callSort(intakeData.secondi);
           break;
         case "pizzaContainer":
           intakeData.printData(intakeData.pizza);
+          callSort(intakeData.pizza);
           break;
       }
     }
@@ -75,23 +81,29 @@ export class Menu {
 
     //Add event listener foreach class member
 
-    let radioElem = document.getElementsByClassName("radioButton");
-    for (var i = 0; i < radioElem.length; i++) {
-      radioElem[i].addEventListener("click", sortData);
-    }
-    function sortData() {
-      switch (this.accessKey) {
-        case "Vegetarian":
-        intakeData.sortData(intakeData.antipasti, this.accessKey);
-          break;
-        case "Vegan":
-          break;
-        case "Gluten free":
-          break;
-        case "Healthy":
-          break;
-        case "Dairy free":
-          break;
+    function callSort(assignArray) {
+      
+      for (var i = 0; i < radioElem.length; i++) {
+        radioElem[i].addEventListener("click", sortData);
+      }
+      function sortData() {
+        switch (this.accessKey) {
+          case "Vegetarian":
+            intakeData.sortData(assignArray, this.accessKey);
+            break;
+          case "Vegan":
+            intakeData.sortData(assignArray, this.accessKey);
+            break;
+          case "Gluten free":
+            intakeData.sortData(assignArray, this.accessKey);
+            break;
+          case "Healthy":
+            intakeData.sortData(assignArray, this.accessKey);
+            break;
+          case "Dairy free":
+            intakeData.sortData(assignArray, this.accessKey);
+            break;
+        }
       }
     }
   }
