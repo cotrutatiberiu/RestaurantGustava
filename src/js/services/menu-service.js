@@ -34,6 +34,7 @@ export class Menu {
           break;
         case "pastaContainer":
           intakeData.printData(intakeData.pasta);
+          // intakeData.sortData(intakeData.pasta, "Glutten free");
           callSort(intakeData.pasta);
           break;
         case "secondiContainer":
@@ -94,7 +95,7 @@ export class Menu {
           case "Vegan":
             intakeData.sortData(assignArray, this.accessKey);
             break;
-          case "Gluten free":
+          case "Glutten free":
             intakeData.sortData(assignArray, this.accessKey);
             break;
           case "Healthy":
