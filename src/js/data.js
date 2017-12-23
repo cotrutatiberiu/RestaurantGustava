@@ -189,7 +189,7 @@ export let fleet=[
     {
         type:"antipasti",
         name:"CRISPY SQUID",
-        description:"Parmesan-stuffed croquettes with truffle dip",
+        description:"Parmesana-stuffed croquettes with truffle dip",
         price:"16.95$",
         category:"pasta",
         calories:748,

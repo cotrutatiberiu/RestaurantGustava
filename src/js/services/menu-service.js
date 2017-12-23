@@ -1,5 +1,6 @@
 export class Menu {
   constructor(data) {
+    
     let intakeData = data;
     let antipastiCon = document.getElementById("antipastiContainer");
     let pastaCon = document.getElementById("pastaContainer");
@@ -12,6 +13,7 @@ export class Menu {
 
     let array = [antipastiCon, pastaCon, secondiCon, pizzaCon];
 
+    console.log(intakeData);
     for (let elem of array) {
       elem.addEventListener("click", fadeInElements);
       elem.addEventListener("click", showItems);
@@ -27,6 +29,7 @@ export class Menu {
       switch (event.target.id) {
         case "antipastiContainer":
           intakeData.printData(intakeData.antipasti);
+          intakeData.sortData(intakeData.antipasti,"Vegan");
           break;
         case "pastaContainer":
           intakeData.printData(intakeData.pasta);
@@ -72,12 +75,35 @@ export class Menu {
       }
     }
 
+    //Add event listener foreach class member
+     function addFilter(selectedArray){
+       this.a=selectedArray;
+       console.log(this.a);
+     }
+    //     let radioElem = document.getElementsByClassName("radioButton");
+    //     for (var i = 0; i < radioElem.length; i++) {
+    //       radioElem[i].addEventListener("click", sortData);
+    //     }
+    //     function sortData() {
+    //       switch (this.accessKey) {
+    //         case "vegetarian":
+    //           break;
+    //         case "vegan":
+    //           break;
+    //         case "gluten":
+    //           break;
+    //         case " healthy":
+    //           break;
+    //         case "dairy":
+    //           break;
+    //       }
 
-
-    let radioElem = document.getElementsByClassName("radioButton");
-    for(var check of radioElem){
-      check.addEventListener("click",sortData);
-    }
-
+    //}
   }
 }
+// }
+// console.log(intakeData);
+// console.log(intakeData.antipasti[0].tag);
+// for(var lel of intakeData.antipasti[0].tag){
+//   console.log(lel);
+// }

@@ -53,10 +53,11 @@ export class DataService {
     );
     return food;
   }
-  printData(element) {
+  printData(element, byTag) {
     let table = document.getElementById("table");
     for (let elem of element) {
       //Creating elements
+      
       var divElem = document.createElement("div");
       var h4Elem = document.createElement("h4");
       var h5Elem = document.createElement("h5");
@@ -91,7 +92,14 @@ export class DataService {
       table.appendChild(divElem);
     }
   }
-  sortData(type,tag){
-    
+  sortData(selectedArray,filter){
+    this.filter=filter;
+    for(var lookfor of selectedArray){
+      for(var search of lookfor.tag){
+        if(search===this.filter){
+          console.log(lookfor);
+        }
+      }
+    }
   }
 }
