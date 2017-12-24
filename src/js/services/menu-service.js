@@ -10,6 +10,8 @@ export class Menu {
 
     let radioElem = document.getElementsByClassName("radioButton");
 
+    let tableElem = document.getElementById("table");
+
     let leftMenuNavbar = document.getElementById("leftMenu");
 
     let array = [antipastiCon, pastaCon, secondiCon, pizzaCon];
@@ -29,12 +31,10 @@ export class Menu {
       switch (event.target.id) {
         case "antipastiContainer":
           intakeData.printData(intakeData.antipasti);
-          // intakeData.sortData(intakeData.antipasti, "Vegan");
           callSort(intakeData.antipasti);
           break;
         case "pastaContainer":
           intakeData.printData(intakeData.pasta);
-          // intakeData.sortData(intakeData.pasta, "Glutten free");
           callSort(intakeData.pasta);
           break;
         case "secondiContainer":
@@ -49,7 +49,6 @@ export class Menu {
     }
     function fadeOutNavbar() {
       let liElem = document.getElementsByClassName("liclass");
-      let tableElem = document.getElementById("table");
       for (let i = 0; i < liElem.length; i++) {
         switch (liElem[i].accessKey) {
           case "antipasti":
@@ -63,18 +62,21 @@ export class Menu {
             liElem[i].addEventListener("click", () => {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.pasta);
+              callSort(intakeData.antipasti);
             });
             break;
           case "secondi":
             liElem[i].addEventListener("click", () => {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.secondi);
+              callSort(intakeData.antipasti);
             });
             break;
           case "pizza":
             liElem[i].addEventListener("click", () => {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.pizza);
+              callSort(intakeData.antipasti);
             });
             break;
         }
@@ -84,25 +86,29 @@ export class Menu {
     //Add event listener foreach class member
 
     function callSort(assignArray) {
-      
       for (var i = 0; i < radioElem.length; i++) {
         radioElem[i].addEventListener("click", sortData);
       }
       function sortData() {
         switch (this.accessKey) {
           case "Vegetarian":
+            tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
             break;
           case "Vegan":
+            tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
             break;
           case "Gluten free":
+            tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
             break;
           case "Healthy":
+            tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
             break;
           case "Dairy free":
+            tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
             break;
         }

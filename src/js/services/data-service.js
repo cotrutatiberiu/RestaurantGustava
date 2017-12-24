@@ -10,6 +10,7 @@ export class DataService {
     this.deserts = [];
     this.kids = [];
     this.drinks = [];
+    let table = document.getElementById("table");
   }
   loadData(fleet) {
     for (let data of fleet) {
@@ -54,10 +55,9 @@ export class DataService {
     return food;
   }
   printData(element) {
-    let table = document.getElementById("table");
     for (let elem of element) {
       //Creating elements
-      
+
       var divElem = document.createElement("div");
       var h4Elem = document.createElement("h4");
       var h5Elem = document.createElement("h5");
@@ -92,11 +92,43 @@ export class DataService {
       table.appendChild(divElem);
     }
   }
-  sortData(selectedArray,filter){
-    for(var lookfor of selectedArray){
-      for(var search of lookfor.tag){
-        if(search===filter){
-          console.log(lookfor);
+  sortData(selectedArray, filter) {
+    for (var lookfor of selectedArray) {
+      for (var search of lookfor.tag) {
+        if (search === filter) {
+          // console.log(lookfor);
+          var divElem = document.createElement("div");
+          var h4Elem = document.createElement("h4");
+          var h5Elem = document.createElement("h5");
+          var pElem = document.createElement("p");
+
+          var linkInfo = document.createElement("a");
+          var spanInfo = document.createElement("span");
+          spanInfo.className = "glyphicon glyphicon-info-sign";
+
+          //Style elements
+          h4Elem.style.color = "white";
+          h5Elem.style.color = "white";
+          pElem.style.color = "white";
+
+          //Assign element content
+          var titleText = document.createTextNode(lookfor.name);
+          var priceText = document.createTextNode(lookfor.price);
+          var descriptionText = document.createTextNode(lookfor.description);
+
+          //Appending elements
+          h4Elem.appendChild(titleText);
+          h5Elem.appendChild(priceText);
+          pElem.appendChild(descriptionText);
+
+          linkInfo.appendChild(spanInfo);
+
+          /* div */
+          divElem.appendChild(h4Elem);
+          divElem.appendChild(h5Elem);
+          divElem.appendChild(pElem);
+          divElem.appendChild(linkInfo);
+          table.appendChild(divElem);
         }
       }
     }
