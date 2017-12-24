@@ -15,7 +15,7 @@ export let fleet = [
     sugar: 12,
     fibre: 3,
     alergyDetails: "Contains garlic, chilli",
-    tag: ["Glutten free", "Dairy free"]
+    tag: ["Gluten free", "Dairy free"]
   },
   {
     type: "secondi",
@@ -71,7 +71,7 @@ export let fleet = [
     fibre: 3,
     alergyDetails:
       "Contains sesame, milk, egg, gluten, garlic, mustard, sulphites",
-    tag: null
+    tag: []
   },
   {
     type: "secondi",
@@ -89,7 +89,7 @@ export let fleet = [
     sugar: 22,
     fibre: 33,
     alergyDetails: "Contains milk, egg, garlic, mustard",
-    tag: ["Glutten free"]
+    tag: ["Gluten free"]
   },
   {
     type: "secondi",
@@ -107,7 +107,7 @@ export let fleet = [
     sugar: 23,
     fibre: 3,
     alergyDetails: "Contains milk, egg, garlic, mustard",
-    tag: ["Glutten free"]
+    tag: ["Gluten free"]
   },
   {
     type: "pasta",
@@ -125,7 +125,7 @@ export let fleet = [
     sugar: 23,
     fibre: 3,
     alergyDetails: "Contains milk, egg, garlic, mustard",
-    tag: ["Glutten free"]
+    tag: ["Gluten free"]
   },
   {
     type: "pasta",
@@ -143,7 +143,7 @@ export let fleet = [
     sugar: 23,
     fibre: 3,
     alergyDetails: "Contains milk, egg, garlic, mustard",
-    tag: ["Glutten free"]
+    tag: ["Gluten free"]
   },
   {
     type: "pizza",
@@ -161,7 +161,7 @@ export let fleet = [
     sugar: 23,
     fibre: 3,
     alergyDetails: "Contains milk, egg, garlic, mustard",
-    tag: ["Glutten free"]
+    tag: ["Gluten free"]
   },
   {
     type: "antipasti",
@@ -212,7 +212,7 @@ export let fleet = [
     sugar: 23,
     fibre: 3,
     alergyDetails: "Contains gluten, chilli, sulphites ",
-    tag: ["Healthy option", "Glutten free", "Dairy free", "Vegetarian", "Vegan"]
+    tag: ["Healthy option", "Gluten free", "Dairy free", "Vegetarian", "Vegan"]
   },
   {
     type: "antipasti",
@@ -230,7 +230,7 @@ export let fleet = [
     sugar: 23,
     fibre: 3,
     alergyDetails: "Contains tree nuts, milk, garlic, sulphites",
-    tag: ["Healthy option", "Glutten free", "Dairy free", "Vegetarian", "Vegan"]
+    tag: ["Healthy option", "Gluten free", "Dairy free", "Vegetarian", "Vegan"]
   }
 ];
 

@@ -53,7 +53,7 @@ export class DataService {
     );
     return food;
   }
-  printData(element, byTag) {
+  printData(element) {
     let table = document.getElementById("table");
     for (let elem of element) {
       //Creating elements
@@ -93,10 +93,9 @@ export class DataService {
     }
   }
   sortData(selectedArray,filter){
-    this.filter=filter;
     for(var lookfor of selectedArray){
       for(var search of lookfor.tag){
-        if(search===this.filter){
+        if(search===filter){
           console.log(lookfor);
         }
       }

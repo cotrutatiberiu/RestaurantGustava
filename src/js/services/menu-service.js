@@ -95,7 +95,7 @@ export class Menu {
           case "Vegan":
             intakeData.sortData(assignArray, this.accessKey);
             break;
-          case "Glutten free":
+          case "Gluten free":
             intakeData.sortData(assignArray, this.accessKey);
             break;
           case "Healthy":
