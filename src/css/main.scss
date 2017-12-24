@@ -1,177 +1,208 @@
 @import "colors";
 @import "fonts";
 @import "menu";
+
+@font-face {
+  font-family: crystal;
+  src: url(/src/fonts/crystalsymphony.ttf);
+}
+
 #restaurantImageContainer {
-    background-image: linear-gradient( rgba(97, 98, 116, 0.1), rgba(97, 98, 116, 1)), url("/src/images/restaurantimg.jpg");
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    .header {
-        .brandlogo {
-            font-family: crystal;
-            font-size: 50px;
-            margin-top: 30px;
-            color: $mywhite;
-            text-decoration: underline;
-        }
-        .navbar {
-            background-color: transparent;
-            background: transparent;
-            border-color: transparent;
-        }
-        li {
-            font-family: $secondfont;
-            font-size: 15px;
-            a {
-                color: $mywhite;
-                text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black, 0 -0.06em black;
-            }
-        }
+  background-image: linear-gradient(
+      rgba(97, 98, 116, 0.1),
+      rgba(97, 98, 116, 1)
+    ),
+    url("/src/images/restaurantimg.jpg");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .header {
+    .brandlogo {
+      font-family: crystal;
+      font-size: 50px;
+      margin-top: 30px;
+      color: $mywhite;
+      text-decoration: underline;
     }
-    #presentation {
-        text-align: center;
+    .navbar {
+      background-color: transparent;
+      background: transparent;
+      border-color: transparent;
+    }
+    li {
+      font-family: $secondfont;
+      font-size: 15px;
+      a {
         color: $mywhite;
-        h1 {
-            font-family: crystal;
-            font-size: 100px;
-            text-shadow: 0.03em 0 black, 0 0.03em black, -0.04em 0 black, 0 -0.03em black;
-        }
-        h3 {
-            font-family: $thirdfont;
-            text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black, 0 -0.06em black;
-            font-size: 30px;
-            letter-spacing: 8px;
-            font-weight: bold;
-        }
+        text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
+        0 -0.06em black;
+      }
     }
+  }
+  #presentation {
+    text-align: center;
+    color: $mywhite;
+
+    h1 {
+      font-family: crystal;
+      font-size: 100px;
+      text-shadow: 0.03em 0 black, 0 0.03em black, -0.04em 0 black,
+        0 -0.03em black;
+    }
+    h3 {
+      font-family: $thirdfont;
+      text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
+        0 -0.06em black;
+      font-size: 30px;
+      letter-spacing: 8px;
+      font-weight: bold;
+    }
+  }
 }
 
 #reservationsAboutContainer {
-    .reservationsBeerWindow {
-        height: 200px;
-        text-align: center;
-        h3 {
-            font-family: crystal;
-            font-size: 40px;
-            color: $hblack;
-            margin-top: 15px;
-            position: relative;
-            font-weight: bold;
-        }
-        p {
-            font-family: $thirdfont;
-            margin: 0px;
-            color: $myblack;
-            position: relative;
-            margin: 0px 20px;
-        }
-        a {
-            text-decoration: none;
-            color: $golden;
-            border: solid $golden;
-            padding: 5px 10px;
-            font-family: $thirdfont;
-            font-weight: bold;
-            letter-spacing: 2px;
-            position: relative;
-        }
+  .reservationsBeerWindow {
+    height: 200px;
+    text-align: center;
+    h3 {
+      font-family: crystal;
+      font-size: 40px;
+      color: $hblack;
+      margin-top: 15px;
+      position: relative;
+      font-weight: bold;
     }
-    #courtyard {
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 200px;
+    p {
+      font-family: $thirdfont;
+      margin: 0px;
+      color: $myblack;
+      position: relative;
+      margin: 0px 20px;
     }
-    .greyAround {
-        background-color: $mygrey;
-        height: 200px;
-        @media (max-width: 768px) {
-            height: 50px;
-        }
+    a {
+      text-decoration: none;
+      color: $golden;
+      border: solid $golden;
+      padding: 5px 10px;
+      font-family: $thirdfont;
+      font-weight: bold;
+      letter-spacing: 2px;
+      position: relative;
     }
-    .beerImg {
-        height: 200px;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+  }
+  #courtyard {
+    background-image: url("/src/images/restaurantcourt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+  }
+  .greyAround {
+    background-color: $mygrey;
+    height: 200px;
     @media (max-width: 768px) {
-        .lower {
-            height: 25px;
-        }
+      height: 50px;
     }
+  }
+  #beerImg {
+    background-image: url("/src/images/restaurantbeer.jpg");
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: 768px) {
+    .lower {
+      height: 25px;
+    }
+  }
 }
 
 #specialitiesImageSector {
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    h1 {
-        text-align: center;
-        position: relative;
-        margin: 0px;
-        top: 50%;
-        color: $mywhite;
-        font-family: $thirdfont;
-        letter-spacing: 10px;
-        font-weight: bold;
-        text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black, 0 -0.06em black;
-    }
+  height: 400px;
+  background-image: url("/src/images/table.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    text-align: center;
+    position: relative;
+    margin: 0px;
+    top: 50%;
+    color: $mywhite;
+    font-family: $thirdfont;
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
+      0 -0.06em black;
+  }
 }
 
 #specialitiesMenuSector {
-    .specialitiesGrey {
-        background-color: $mygrey;
-        height: 170px;
-        @media (max-width: 991px) {
-            height: 50px;
-        }
-        @media (max-width: 768px) {
-            height: 50px;
-        }
-    }
-    .imageWindow {
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 170px;
-    }
-    .text {
-        text-align: center;
-        height: 170px;
-        h4 {
-            color: $hblack;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-        p {
-            color: $myblack;
-            font-size: 13px;
-            margin: 0px 5px;
-        }
-        h5 {
-            color: $golden;
-            font-weight: 600;
-        }
-    }
+  .specialitiesGrey {
+    background-color: $mygrey;
+    height: 170px;
     @media (max-width: 991px) {
-        .specialitiesLower {
-            height: 25px;
-        }
+      height: 50px;
     }
     @media (max-width: 768px) {
-        .specialitiesLower {
-            height: 25px;
-        }
+      height: 50px;
     }
+  }
+  .lasagna {
+    background-image: url("/src/images/lasagna.jpg");
+  }
+  .eggplant {
+    background-image: url("/src/images/eggplant.jpeg");
+  }
+  .baricole {
+    background-image: url("/src/images/baricole.jpg");
+  }
+  .meatballs {
+    background-image: url("/src/images/meat.jpeg");
+  }
+  .imageWindow {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 170px;
+  }
+  .text {
+    text-align: center;
+    height: 170px;
+    h4 {
+      color: $hblack;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    p {
+      color: $myblack;
+      font-size: 13px;
+      margin: 0px 5px;
+    }
+    h5 {
+      color: $golden;
+      font-weight: 600;
+    }
+  }
+  @media (max-width: 991px) {
+    .specialitiesLower {
+      height: 25px;
+    }
+  }
+  @media (max-width: 768px) {
+    .specialitiesLower {
+      height: 25px;
+    }
+  }
 }
 
 #ingredientsImageSector {
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 400px;
+  background-image: url("/src/images/ingredients.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
