@@ -56,6 +56,7 @@ export class Menu {
             liElem[i].addEventListener("click", () => {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.antipasti);
+              callSort(intakeData.antipasti);
             });
             break;
           case "pasta":
