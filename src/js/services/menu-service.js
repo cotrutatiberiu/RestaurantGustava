@@ -120,14 +120,14 @@ export class Menu {
     function callModal() {
       var modalContentElem = document.getElementsByClassName("modal-content");
       var getButton = document.getElementsByClassName("infoButton");
-      for (var i = 0; i < getButton.length; i++) {
-        for (var j = 0; j < modalContentElem.length; j++) {
-          if (getButton[i].accessKey === modalContentElem[j].accessKey) {
+      for (var z = 0; z < getButton.length; z++) {
+        for (var y = 0; y < modalContentElem.length; y++) {
+          if (getButton[z].accessKey === modalContentElem[y].accessKey) {
             console.log("true");
-            getButton[i].addEventListener("click", function() {
-              modalContentElem[j].style.display = "none";
+            getButton[z].addEventListener("click", function() {
+              modalContentElem[y].style.color = "red";
             });
-            console.log(modalContentElem[j]);
+            console.log(modalContentElem[y]);
           }
         }
       }
