@@ -33,6 +33,7 @@ export class Menu {
           intakeData.printData(intakeData.antipasti);
           callSort(intakeData.antipasti);
           intakeData.createModal(intakeData.antipasti);
+          callModal();
           break;
         case "pastaContainer":
           intakeData.printData(intakeData.pasta);
@@ -116,12 +117,24 @@ export class Menu {
         }
       }
     }
-    function createModal(){
-      var getButton=document.getElementsByClassName("infoButton");
-      for(var selected of getButton){
-        selected.addEventListener("click",()=>{
-          console.log("a");
-        })
+    function callModal() {
+      var modalContentElem = document.getElementsByClassName("modal-content");
+      var getButton = document.getElementsByClassName("infoButton");
+      for (var i = 0; i < getButton.length; i++) {
+        console.log(getButton[i].accessKey);
+        for (var j = 0; j < modalContentElem.length; j++) {
+          console.log(modalContentElem[j].accessKey);
+          if (getButton[i].accessKey===modalContentElem[j].accessKey) {
+
+            console.log("tru");
+          }
+        }
+        // for(var i of getButton){
+        //   for(var j of modalContentElem){
+        //     console.log(i);
+        //     console.log(j);
+        //   }
+        // }
       }
     }
   }

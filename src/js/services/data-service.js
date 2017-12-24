@@ -68,6 +68,7 @@ export class DataService {
 
       linkInfo.setAttribute("href", "#");
       linkInfo.setAttribute("class","infoButton");
+      linkInfo.setAttribute("accesskey",elem.name)
       spanInfo.className = "glyphicon glyphicon-info-sign";
 
       //Style elements
@@ -143,7 +144,6 @@ export class DataService {
   }
   createModal(setArray){
     let modal=document.getElementById("myModala");
-    console.log(setArray);
     for(var index of setArray){
       
       //Create elements
@@ -153,18 +153,20 @@ export class DataService {
       
       var pNutrutionalElement=document.createElement("p");
       
-
       var pAlergyTags=document.createElement("p");
-      
 
       var h4AlergyTitle=document.createElement("h4");
-      
 
       var pAlergyText=document.createElement("p");
+
+      var spanElement=document.createElement("span");
       
+      var modalContentElement=document.createElement("div");
 
       //Style
       // h4NutritionalTitle.style.color="white";
+      modalContentElement.setAttribute("class","modal-content");
+      modalContentElement.setAttribute("accesskey",index.name);
 
       //Assign element content
 
@@ -174,14 +176,17 @@ export class DataService {
       pAlergyTags.innerHTML= index.tag.join(", ") ;
       h4AlergyTitle.innerHTML="Allergy Details";
       pAlergyText.innerHTML=index.alergyDetails;
+      spanElement.innerHTML="&times;"
       //Appending
 
-      modal.appendChild(h3Title);
-      modal.appendChild(h4NutritionalTitle);
-      modal.appendChild(pNutrutionalElement);
-      modal.appendChild(pAlergyTags);
-      modal.appendChild(h4AlergyTitle);
-      modal.appendChild(pAlergyText);
+      modalContentElement.appendChild(spanElement);
+      modalContentElement.appendChild(h3Title);
+      modalContentElement.appendChild(h4NutritionalTitle);
+      modalContentElement.appendChild(pNutrutionalElement);
+      modalContentElement.appendChild(pAlergyTags);
+      modalContentElement.appendChild(h4AlergyTitle);
+      modalContentElement.appendChild(pAlergyText);
+      modal.appendChild(modalContentElement);
 
     }
   }
