@@ -125,7 +125,7 @@ export class Menu {
           if (getButton[z].accessKey === modalContentElem[y].accessKey) {
             console.log("true");
             getButton[z].addEventListener("click", function() {
-              modalContentElem[y].style.color = "red";
+              modalContentElem[y].style.display = "none";
             });
             console.log(modalContentElem[y]);
           }
