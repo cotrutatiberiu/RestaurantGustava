@@ -79,6 +79,7 @@ export class DataService {
 
       //Appending elements
       h4Elem.appendChild(titleText);
+      h4Elem.appendChild(linkInfo);
       h5Elem.appendChild(priceText);
       pElem.appendChild(descriptionText);
 
@@ -88,7 +89,7 @@ export class DataService {
       divElem.appendChild(h4Elem);
       divElem.appendChild(h5Elem);
       divElem.appendChild(pElem);
-      divElem.appendChild(linkInfo);
+      // divElem.appendChild(linkInfo);
       table.appendChild(divElem);
     }
   }
