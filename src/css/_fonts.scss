@@ -1,2 +1,11 @@
-$secondfont: "Allerta Stencil";
+$secondfont: allerta;
 $thirdfont: "Helvetica";
+@font-face {
+    font-family: crystal;
+    src: url(/src/fonts/crystalsymphony.ttf);
+}
+
+@font-face {
+    font-family: allerta;
+    src: url(/src/fonts/allerta_stencil.ttf);
+}
