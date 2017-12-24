@@ -199,7 +199,7 @@ export let fleet = [
   },
   {
     type: "antipasti",
-    name: "CRISPY SQUID",
+    name: "CRISPY SQUIDA",
     description: "Parmesana-stuffed croquettes with truffle dip",
     price: "16.95$",
     category: "pasta",
