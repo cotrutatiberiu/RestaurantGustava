@@ -142,37 +142,46 @@ export class DataService {
     }
   }
   createModal(setArray){
+    let modal=document.getElementById("myModala");
+    console.log(setArray);
     for(var index of setArray){
-      var modal=document.getElementById("myModal");
+      
       //Create elements
-      // var h3Title=document.createElement("h3");
+      var h3Title=document.createElement("h3");
 
-      var h4NutritionalTitle=document.createElement("h4");
-      var h4NutritionalText=document.createTextNode("Nutritional Information");
+      let h4NutritionalTitle=document.createElement("h4");
+      
+      var pNutrutionalElement=document.createElement("p");
+      
 
-      // var pNutrutionalElement=document.createElement("p");
-      // var pNutrutionalText=document.createTextNode("");
+      var pAlergyTags=document.createElement("p");
+      
 
-      // var pAlergyTags=document.createElement("p");
-      // var pAlergyTagsText=document.createTextNode("");
+      var h4AlergyTitle=document.createElement("h4");
+      
 
-      // var h4AlergyTitle=document.createElement("h4");
-      // var h4AlergyText=document.createTextNode("Allergy Details");
+      var pAlergyText=document.createElement("p");
+      
 
-      // var pAlergyText=document.createElement("p");
-      // pAlergyText.innerHTML="asd";
+      //Style
+      // h4NutritionalTitle.style.color="white";
+
       //Assign element content
 
-      // h3Title=index.name;
-
+      h3Title.innerHTML=index.name;
+      h4NutritionalTitle.innerHTML="Nutritional Information";
+      pNutrutionalElement.innerHTML=`Calories: ${index.calories}, Fat: ${index.fat}g, Saturates: ${index.saturates}g, Protein: ${index.protein}g, Salt: ${index.salt}g, Carbs:${index.carbs}g, Sugar:${index.sugar}g, Fibre:${index.fibre}g`;
+      pAlergyTags.innerHTML= index.tag.join(", ") ;
+      h4AlergyTitle.innerHTML="Allergy Details";
+      pAlergyText.innerHTML=index.alergyDetails;
       //Appending
 
-      h4NutritionalTitle.appendChild(h4NutritionalText);
-      // pNutrutionalElement.appendChild(pNutrutionalText);
-      // h4AlergyTitle.appendChild(h4NutritionalText);
-      // pAlergyTags.appendChild(pAlergyTagsText);
-
+      modal.appendChild(h3Title);
       modal.appendChild(h4NutritionalTitle);
+      modal.appendChild(pNutrutionalElement);
+      modal.appendChild(pAlergyTags);
+      modal.appendChild(h4AlergyTitle);
+      modal.appendChild(pAlergyText);
 
     }
   }
