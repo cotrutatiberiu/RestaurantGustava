@@ -32,6 +32,7 @@ export class Menu {
         case "antipastiContainer":
           intakeData.printData(intakeData.antipasti);
           callSort(intakeData.antipasti);
+          intakeData.createModal(intakeData.antipasti);
           break;
         case "pastaContainer":
           intakeData.printData(intakeData.pasta);
@@ -62,21 +63,22 @@ export class Menu {
             liElem[i].addEventListener("click", () => {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.pasta);
-              callSort(intakeData.antipasti);
+              callSort(intakeData.pasta);
             });
             break;
           case "secondi":
             liElem[i].addEventListener("click", () => {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.secondi);
-              callSort(intakeData.antipasti);
+              callSort(intakeData.secondi);
             });
             break;
           case "pizza":
             liElem[i].addEventListener("click", () => {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.pizza);
-              callSort(intakeData.antipasti);
+              callSort(intakeData.pizza);
+              intakeData.createModal(intakeData.pizza);
             });
             break;
         }
@@ -112,6 +114,14 @@ export class Menu {
             intakeData.sortData(assignArray, this.accessKey);
             break;
         }
+      }
+    }
+    function createModal(){
+      var getButton=document.getElementsByClassName("infoButton");
+      for(var selected of getButton){
+        selected.addEventListener("click",()=>{
+          console.log("a");
+        })
       }
     }
   }

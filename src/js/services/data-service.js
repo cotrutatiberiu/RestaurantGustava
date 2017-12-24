@@ -67,6 +67,7 @@ export class DataService {
       var spanInfo = document.createElement("span");
 
       linkInfo.setAttribute("href", "#");
+      linkInfo.setAttribute("class","infoButton");
       spanInfo.className = "glyphicon glyphicon-info-sign";
 
       //Style elements
@@ -95,6 +96,8 @@ export class DataService {
       divElem.appendChild(pElem);
       // divElem.appendChild(linkInfo);
       table.appendChild(divElem);
+
+      //Creating modals
     }
   }
   sortData(selectedArray, filter) {
@@ -136,6 +139,41 @@ export class DataService {
           table.appendChild(divElem);
         }
       }
+    }
+  }
+  createModal(setArray){
+    for(var index of setArray){
+      var modal=document.getElementById("myModal");
+      //Create elements
+      // var h3Title=document.createElement("h3");
+
+      var h4NutritionalTitle=document.createElement("h4");
+      var h4NutritionalText=document.createTextNode("Nutritional Information");
+
+      // var pNutrutionalElement=document.createElement("p");
+      // var pNutrutionalText=document.createTextNode("");
+
+      // var pAlergyTags=document.createElement("p");
+      // var pAlergyTagsText=document.createTextNode("");
+
+      // var h4AlergyTitle=document.createElement("h4");
+      // var h4AlergyText=document.createTextNode("Allergy Details");
+
+      // var pAlergyText=document.createElement("p");
+      // pAlergyText.innerHTML="asd";
+      //Assign element content
+
+      // h3Title=index.name;
+
+      //Appending
+
+      h4NutritionalTitle.appendChild(h4NutritionalText);
+      // pNutrutionalElement.appendChild(pNutrutionalText);
+      // h4AlergyTitle.appendChild(h4NutritionalText);
+      // pAlergyTags.appendChild(pAlergyTagsText);
+
+      modal.appendChild(h4NutritionalTitle);
+
     }
   }
 }
