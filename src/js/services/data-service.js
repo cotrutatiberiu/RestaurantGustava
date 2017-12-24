@@ -65,6 +65,8 @@ export class DataService {
 
       var linkInfo = document.createElement("a");
       var spanInfo = document.createElement("span");
+
+      linkInfo.setAttribute("href", "#");
       spanInfo.className = "glyphicon glyphicon-info-sign";
 
       //Style elements
@@ -79,14 +81,16 @@ export class DataService {
 
       //Appending elements
       h4Elem.appendChild(titleText);
-      h4Elem.appendChild(linkInfo);
+      h4Elem.appendChild(spanInfo);
+      linkInfo.appendChild(h4Elem);
+
+      linkInfo.appendChild(h4Elem);
+
       h5Elem.appendChild(priceText);
       pElem.appendChild(descriptionText);
 
-      linkInfo.appendChild(spanInfo);
-
       /* div */
-      divElem.appendChild(h4Elem);
+      divElem.appendChild(linkInfo);
       divElem.appendChild(h5Elem);
       divElem.appendChild(pElem);
       // divElem.appendChild(linkInfo);
