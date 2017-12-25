@@ -133,9 +133,11 @@ export class DataService {
   }
   //Create modals by array
   createModal(setArray) {
+    let menuCon = document.getElementById("menucontainer");
+    let modalBox=document.getElementById("modalContentBox");
     for (var index of setArray) {
       //Create elements
-      let menuCon = document.getElementById("menucontainer");
+      
       let modal = document.createElement("div");
       let h3Title = document.createElement("h3");
       let h4NutritionalTitle = document.createElement("h4");
@@ -168,7 +170,8 @@ export class DataService {
       modalContentElement.appendChild(h4AlergyTitle);
       modalContentElement.appendChild(pAlergyText);
       modal.appendChild(modalContentElement);
-      menuCon.appendChild(modal);
+      modalBox.appendChild(modal);
+
     }
   }
 }

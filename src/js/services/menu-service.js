@@ -9,6 +9,7 @@ export class Menu {
     let radioElem = document.getElementsByClassName("radioButton");
     let tableElem = document.getElementById("table");
     let leftMenuNavbar = document.getElementById("leftMenu");
+    let modalConBox=document.getElementById("modalContentBox");
     let array = [antipastiCon, pastaCon, secondiCon, pizzaCon];
     for (let elem of array) {
       elem.addEventListener("click", fadeInElements);
@@ -59,6 +60,7 @@ export class Menu {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.antipasti);
               callSort(intakeData.antipasti);
+              modalConBox.innerHTML="";
               intakeData.createModal(intakeData.antipasti);
               callModal();
             });
@@ -68,6 +70,7 @@ export class Menu {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.pasta);
               callSort(intakeData.pasta);
+              modalConBox.innerHTML="";
               intakeData.createModal(intakeData.pasta);
               callModal();
             });
@@ -77,6 +80,7 @@ export class Menu {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.secondi);
               callSort(intakeData.secondi);
+              modalConBox.innerHTML="";
               intakeData.createModal(intakeData.secondi);
               callModal();
             });
@@ -86,6 +90,7 @@ export class Menu {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.pizza);
               callSort(intakeData.pizza);
+              modalConBox.innerHTML="";
               intakeData.createModal(intakeData.pizza);
               callModal()
             });
@@ -103,22 +108,37 @@ export class Menu {
           case "Vegetarian":
             tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
+            modalConBox.innerHTML="";
+            intakeData.createModal(assignArray);
+            callModal();
             break;
           case "Vegan":
             tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
+            modalConBox.innerHTML="";
+            intakeData.createModal(assignArray);
+            callModal();
             break;
           case "Gluten free":
             tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
+            modalConBox.innerHTML="";
+            intakeData.createModal(assignArray);
+            callModal();
             break;
           case "Healthy":
             tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
+            modalConBox.innerHTML="";
+            intakeData.createModal(assignArray);
+            callModal();
             break;
           case "Dairy free":
             tableElem.innerHTML = "";
             intakeData.sortData(assignArray, this.accessKey);
+            modalConBox.innerHTML="";
+            intakeData.createModal(assignArray);
+            callModal();
             break;
         }
       }
