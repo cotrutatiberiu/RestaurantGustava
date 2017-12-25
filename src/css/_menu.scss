@@ -3,13 +3,14 @@
 // * {
 //     border:1px solid red;
 //     }
-html,body{
-    height: 100%;
-}
-#menucontainer {
+body{
     background-image: url("/src/images/menutable.jpg");
     background-size:cover;
-    height: 100vh !important;
+    height: 100%;
+    width: 100%;
+#menucontainer {
+    
+    height: 100%;
     width: 100%;
   .row {
     margin: 0px;
@@ -175,4 +176,5 @@ html,body{
 }
 .col-lg-8{
     padding: 0px;
+}
 }
