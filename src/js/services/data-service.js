@@ -134,10 +134,10 @@ export class DataService {
   //Create modals by array
   createModal(setArray) {
     let menuCon = document.getElementById("menucontainer");
-    let modalBox=document.getElementById("modalContentBox");
+    let modalBox = document.getElementById("modalContentBox");
     for (var index of setArray) {
       //Create elements
-      
+
       let modal = document.createElement("div");
       let h3Title = document.createElement("h3");
       let h4NutritionalTitle = document.createElement("h4");
