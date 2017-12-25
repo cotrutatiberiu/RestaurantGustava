@@ -94,7 +94,7 @@ export class Menu {
               callSort(intakeData.pizza);
               modalConBox.innerHTML = "";
               intakeData.createModal(intakeData.pizza);
-              callModal()
+              callModal();
             });
             break;
         }
@@ -155,18 +155,21 @@ export class Menu {
         for (let y = 0; y < modalContentElem.length; y++) {
           //Loop through span X
           for (let j = 0; j < span.length; j++) {
-            if (getButton[z].accessKey === modalContentElem[y].accessKey && modalContentElem[y].accessKey === span[j].accessKey) {
-              getButton[z].addEventListener("click", function () {
+            if (
+              getButton[z].accessKey === modalContentElem[y].accessKey &&
+              modalContentElem[y].accessKey === span[j].accessKey
+            ) {
+              getButton[z].addEventListener("click", function() {
                 modalContentElem[y].style.display = "block";
               });
               span[j].addEventListener("click", () => {
                 modalContentElem[y].style.display = "none";
               });
-              window.addEventListener("click", function (event) {
+              window.addEventListener("click", function(event) {
                 if (event.target == modalContentElem[y]) {
                   modalContentElem[y].style.display = "none";
                 }
-              })
+              });
             }
           }
         }

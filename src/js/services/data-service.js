@@ -64,16 +64,13 @@ export class DataService {
       var linkInfo = document.createElement("a");
       var spanInfo = document.createElement("span");
       //Style elements
-      h4Elem.style.color = "white";
-      h5Elem.style.color = "white";
-      pElem.style.color = "white";
       linkInfo.setAttribute("href", "#");
       linkInfo.setAttribute("class", "infoButton");
-      linkInfo.setAttribute("accesskey", elem.name)
+      linkInfo.setAttribute("accesskey", elem.name);
       spanInfo.className = "glyphicon glyphicon-info-sign";
-      divElem.setAttribute("class","borderBox");
+      divElem.setAttribute("class", "borderBox");
       //Assign element content
-      var titleText = document.createTextNode(elem.name);
+      var titleText = document.createTextNode(elem.name + "\xa0");
       var priceText = document.createTextNode(elem.price);
       var descriptionText = document.createTextNode(elem.description);
       //Appending elements
@@ -103,16 +100,14 @@ export class DataService {
           var pElem = document.createElement("p");
           var linkInfo = document.createElement("a");
           var spanInfo = document.createElement("span");
+          //Style elements
           linkInfo.setAttribute("href", "#");
           linkInfo.setAttribute("class", "infoButton");
-          linkInfo.setAttribute("accesskey", lookfor.name)
+          linkInfo.setAttribute("accesskey", lookfor.name);
           spanInfo.className = "glyphicon glyphicon-info-sign";
-          //Style elements
-          h4Elem.style.color = "white";
-          h5Elem.style.color = "white";
-          pElem.style.color = "white";
+          divElem.setAttribute("class","borderBox");
           //Assign element content
-          var titleText = document.createTextNode(lookfor.name);
+          var titleText = document.createTextNode(lookfor.name + "\xa0");
           var priceText = document.createTextNode(lookfor.price);
           var descriptionText = document.createTextNode(lookfor.description);
           //Appending elements
@@ -157,7 +152,11 @@ export class DataService {
       //Assign element content
       h3Title.innerHTML = index.name;
       h4NutritionalTitle.innerHTML = "Nutritional Information";
-      pNutrutionalElement.innerHTML = `Calories: ${index.calories}, Fat: ${index.fat}g, Saturates: ${index.saturates}g, Protein: ${index.protein}g, Salt: ${index.salt}g, Carbs:${index.carbs}g, Sugar:${index.sugar}g, Fibre:${index.fibre}g`;
+      pNutrutionalElement.innerHTML = `Calories: ${index.calories}, Fat: ${
+        index.fat
+      }g, Saturates: ${index.saturates}g, Protein: ${index.protein}g, Salt: ${
+        index.salt
+      }g, Carbs:${index.carbs}g, Sugar:${index.sugar}g, Fibre:${index.fibre}g`;
       pAlergyTags.innerHTML = index.tag.join(", ");
       h4AlergyTitle.innerHTML = "Allergy Details";
       pAlergyText.innerHTML = index.alergyDetails;
@@ -172,7 +171,6 @@ export class DataService {
       modalContentElement.appendChild(pAlergyText);
       modal.appendChild(modalContentElement);
       modalBox.appendChild(modal);
-
     }
   }
 }
