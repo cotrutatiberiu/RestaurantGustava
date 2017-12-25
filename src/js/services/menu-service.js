@@ -10,6 +10,7 @@ export class Menu {
     let tableElem = document.getElementById("table");
     let leftMenuNavbar = document.getElementById("leftMenu");
     let modalConBox = document.getElementById("modalContentBox");
+    let sortContainer = document.getElementById("sorting");
     let array = [antipastiCon, pastaCon, secondiCon, pizzaCon];
     for (let elem of array) {
       elem.addEventListener("click", fadeInElements);
@@ -22,7 +23,8 @@ export class Menu {
     //Create images to menu
     function showItems(event) {
       this.event = event;
-      leftMenuNavbar.style.display = "inline";
+      leftMenuNavbar.style.display = "block";
+      sortContainer.style.display = "block";
       switch (event.target.id) {
         case "antipastiContainer":
           intakeData.printData(intakeData.antipasti);
