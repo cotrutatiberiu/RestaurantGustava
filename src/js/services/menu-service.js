@@ -5,26 +5,20 @@ export class Menu {
     let pastaCon = document.getElementById("pastaContainer");
     let secondiCon = document.getElementById("secondiContainer");
     let pizzaCon = document.getElementById("pizzaContainer");
-
     let menuPicturesElem = document.getElementById("menupictures");
-
     let radioElem = document.getElementsByClassName("radioButton");
-
     let tableElem = document.getElementById("table");
-
     let leftMenuNavbar = document.getElementById("leftMenu");
-
     let array = [antipastiCon, pastaCon, secondiCon, pizzaCon];
-
     for (let elem of array) {
       elem.addEventListener("click", fadeInElements);
       elem.addEventListener("click", showItems);
       elem.addEventListener("click", fadeOutNavbar);
     }
-
     function fadeInElements() {
       menuPicturesElem.style.display = "none";
     }
+    //Create images to menu
     function showItems(event) {
       this.event = event;
       leftMenuNavbar.style.display = "inline";
@@ -38,17 +32,24 @@ export class Menu {
         case "pastaContainer":
           intakeData.printData(intakeData.pasta);
           callSort(intakeData.pasta);
+          intakeData.createModal(intakeData.pasta);
+          callModal();
           break;
         case "secondiContainer":
           intakeData.printData(intakeData.secondi);
           callSort(intakeData.secondi);
+          intakeData.createModal(intakeData.secondi);
+          callModal();
           break;
         case "pizzaContainer":
           intakeData.printData(intakeData.pizza);
           callSort(intakeData.pizza);
+          intakeData.createModal(intakeData.pizza);
+          callModal();
           break;
       }
     }
+    //Create navbar
     function fadeOutNavbar() {
       let liElem = document.getElementsByClassName("liclass");
       for (let i = 0; i < liElem.length; i++) {
@@ -58,6 +59,8 @@ export class Menu {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.antipasti);
               callSort(intakeData.antipasti);
+              intakeData.createModal(intakeData.antipasti);
+              callModal();
             });
             break;
           case "pasta":
@@ -65,6 +68,8 @@ export class Menu {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.pasta);
               callSort(intakeData.pasta);
+              intakeData.createModal(intakeData.pasta);
+              callModal();
             });
             break;
           case "secondi":
@@ -72,6 +77,8 @@ export class Menu {
               tableElem.innerHTML = "";
               intakeData.printData(intakeData.secondi);
               callSort(intakeData.secondi);
+              intakeData.createModal(intakeData.secondi);
+              callModal();
             });
             break;
           case "pizza":
@@ -80,14 +87,13 @@ export class Menu {
               intakeData.printData(intakeData.pizza);
               callSort(intakeData.pizza);
               intakeData.createModal(intakeData.pizza);
+              callModal()
             });
             break;
         }
       }
     }
-
-    //Add event listener foreach class member
-
+    //Creating sort for every navbar member
     function callSort(assignArray) {
       for (var i = 0; i < radioElem.length; i++) {
         radioElem[i].addEventListener("click", sortData);
@@ -121,8 +127,11 @@ export class Menu {
       var modalContentElem = document.getElementsByClassName("myModal");
       var getButton = document.getElementsByClassName("infoButton");
       let span = document.getElementsByClassName("spana");
+      //Loop through nammes
       for (let z = 0; z < getButton.length; z++) {
+        //Loop through created modals
         for (let y = 0; y < modalContentElem.length; y++) {
+          //Loop through span X
           for (let j = 0; j < span.length; j++) {
             if (getButton[z].accessKey === modalContentElem[y].accessKey && modalContentElem[y].accessKey === span[j].accessKey) {
               getButton[z].addEventListener("click", function () {
@@ -131,13 +140,12 @@ export class Menu {
               span[j].addEventListener("click", () => {
                 modalContentElem[y].style.display = "none";
               });
-              window.addEventListener("click", function(event) {
+              window.addEventListener("click", function (event) {
                 if (event.target == modalContentElem[y]) {
                   modalContentElem[y].style.display = "none";
                 }
               })
             }
-
           }
         }
       }
