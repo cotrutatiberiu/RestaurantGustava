@@ -67,8 +67,8 @@ export class DataService {
       var spanInfo = document.createElement("span");
 
       linkInfo.setAttribute("href", "#");
-      linkInfo.setAttribute("class","infoButton");
-      linkInfo.setAttribute("accesskey",elem.name)
+      linkInfo.setAttribute("class", "infoButton");
+      linkInfo.setAttribute("accesskey", elem.name)
       spanInfo.className = "glyphicon glyphicon-info-sign";
 
       //Style elements
@@ -142,43 +142,39 @@ export class DataService {
       }
     }
   }
-  createModal(setArray){
-    let modal=document.getElementById("myModal");
-    for(var index of setArray){
-      
+  createModal(setArray) {
+
+    for (var index of setArray) {
+
       //Create elements
-      var h3Title=document.createElement("h3");
-
-      let h4NutritionalTitle=document.createElement("h4");
-      
-      var pNutrutionalElement=document.createElement("p");
-      
-      var pAlergyTags=document.createElement("p");
-
-      var h4AlergyTitle=document.createElement("h4");
-
-      var pAlergyText=document.createElement("p");
-
-      var spanElement=document.createElement("span");
-      
-      var modalContentElement=document.createElement("div");
+      let menuCon = document.getElementById("menucontainer");
+      let modal = document.createElement("div");
+      let h3Title = document.createElement("h3");
+      let h4NutritionalTitle = document.createElement("h4");
+      let pNutrutionalElement = document.createElement("p");
+      let pAlergyTags = document.createElement("p");
+      let h4AlergyTitle = document.createElement("h4");
+      let pAlergyText = document.createElement("p");
+      let spanElement = document.createElement("span");
+      let modalContentElement = document.createElement("div");
 
       //Style
       // h4NutritionalTitle.style.color="white";
-      modalContentElement.setAttribute("class","modal-content");
-      modalContentElement.setAttribute("accesskey",index.name);
-      spanElement.setAttribute("class","spana");
-      spanElement.setAttribute("accesskey",index.name);
+      modalContentElement.setAttribute("class", "modal-content");
+      spanElement.setAttribute("class", "spana");
+      spanElement.setAttribute("accesskey", index.name);
+      modal.setAttribute("accesskey", index.name);
+      modal.setAttribute("class", "myModal modal");
 
       //Assign element content
 
-      h3Title.innerHTML=index.name;
-      h4NutritionalTitle.innerHTML="Nutritional Information";
-      pNutrutionalElement.innerHTML=`Calories: ${index.calories}, Fat: ${index.fat}g, Saturates: ${index.saturates}g, Protein: ${index.protein}g, Salt: ${index.salt}g, Carbs:${index.carbs}g, Sugar:${index.sugar}g, Fibre:${index.fibre}g`;
-      pAlergyTags.innerHTML= index.tag.join(", ") ;
-      h4AlergyTitle.innerHTML="Allergy Details";
-      pAlergyText.innerHTML=index.alergyDetails;
-      spanElement.innerHTML="&times;"
+      h3Title.innerHTML = index.name;
+      h4NutritionalTitle.innerHTML = "Nutritional Information";
+      pNutrutionalElement.innerHTML = `Calories: ${index.calories}, Fat: ${index.fat}g, Saturates: ${index.saturates}g, Protein: ${index.protein}g, Salt: ${index.salt}g, Carbs:${index.carbs}g, Sugar:${index.sugar}g, Fibre:${index.fibre}g`;
+      pAlergyTags.innerHTML = index.tag.join(", ");
+      h4AlergyTitle.innerHTML = "Allergy Details";
+      pAlergyText.innerHTML = index.alergyDetails;
+      spanElement.innerHTML = "&times;";
       //Appending
 
       modalContentElement.appendChild(spanElement);
@@ -189,7 +185,7 @@ export class DataService {
       modalContentElement.appendChild(h4AlergyTitle);
       modalContentElement.appendChild(pAlergyText);
       modal.appendChild(modalContentElement);
-
+      menuCon.appendChild(modal);
     }
   }
 }
