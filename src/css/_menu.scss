@@ -30,18 +30,27 @@
         .menuPicture {
             height: 100%;
             padding: 0px;
+            border: 5px solid $golden;
             .windowP {
                 height: 100%;
                 width: 100%;
                 background-size: cover;
                 margin: 0px;
+                box-shadow: inset 0 0 0 1000px rgba(1,0,0,.2);
                 h3 {
                     font-size: 35px;
-                    margin: 0px 0px 0px 20px;
+                    margin: 0px;
                     font-family: $secondfont;
-                    color: $hblack;
+                    color: $mywhite;
                     pointer-events: none;
+                    position: relative;
+                    top:15px;
+                    left:15px;
                 }
+                &:hover{
+                    box-shadow: 0 0 50px #ccc;
+                }
+                
             }
         }
         a {
