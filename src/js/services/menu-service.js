@@ -131,8 +131,8 @@ export class Menu {
               span[j].addEventListener("click", () => {
                 modalContentElem[y].style.display = "none";
               });
-              window.addEventListener("click", function () {
-                if (event.target == modal) {
+              window.addEventListener("click", function(event) {
+                if (event.target == modalContentElem[y]) {
                   modalContentElem[y].style.display = "none";
                 }
               })
