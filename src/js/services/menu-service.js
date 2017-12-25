@@ -120,8 +120,8 @@ export class Menu {
     function callModal() {
       var modalContentElem = document.getElementsByClassName("modal-content");
       var getButton = document.getElementsByClassName("infoButton");
-      for (var z = 0; z < getButton.length; z++) {
-        for (var y = 0; y < modalContentElem.length; y++) {
+      for (let z = 0; z < getButton.length; z++) {
+        for (let y = 0; y < modalContentElem.length; y++) {
           if (getButton[z].accessKey === modalContentElem[y].accessKey) {
             console.log("true");
             getButton[z].addEventListener("click", function() {

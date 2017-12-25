@@ -143,7 +143,7 @@ export class DataService {
     }
   }
   createModal(setArray){
-    let modal=document.getElementById("myModala");
+    let modal=document.getElementById("myModal");
     for(var index of setArray){
       
       //Create elements
