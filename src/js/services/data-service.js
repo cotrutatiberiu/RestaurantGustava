@@ -63,14 +63,15 @@ export class DataService {
       var pElem = document.createElement("p");
       var linkInfo = document.createElement("a");
       var spanInfo = document.createElement("span");
-      linkInfo.setAttribute("href", "#");
-      linkInfo.setAttribute("class", "infoButton");
-      linkInfo.setAttribute("accesskey", elem.name)
-      spanInfo.className = "glyphicon glyphicon-info-sign";
       //Style elements
       h4Elem.style.color = "white";
       h5Elem.style.color = "white";
       pElem.style.color = "white";
+      linkInfo.setAttribute("href", "#");
+      linkInfo.setAttribute("class", "infoButton");
+      linkInfo.setAttribute("accesskey", elem.name)
+      spanInfo.className = "glyphicon glyphicon-info-sign";
+      divElem.setAttribute("class","borderBox");
       //Assign element content
       var titleText = document.createTextNode(elem.name);
       var priceText = document.createTextNode(elem.price);

@@ -25,22 +25,22 @@
     }
     #leftList {
         list-style-type: none;
-        li{
+        li {
             margin: 50px 0px;
-        a{
-            font-size: 25px;
-            color: $mywhite;
-            font-family: $secondfont;
-            background-color: $hblack;
-            border: 2px solid $golden;
-            text-decoration: none;
-            padding: 7px;
-            box-shadow: inset 0 0 0 1000px rgba(1,0,0,.2);
-            &:hover{
-                box-shadow: 0 0 50px #ccc;
+            a {
+                font-size: 25px;
+                color: $mywhite;
+                font-family: $secondfont;
+                background-color: $hblack;
+                border: 2px solid $golden;
+                text-decoration: none;
+                padding: 7px;
+                box-shadow: inset 0 0 0 1000px rgba(1, 0, 0, .2);
+                &:hover {
+                    box-shadow: 0 0 50px #ccc;
+                }
             }
         }
-    }
     }
     #menupictures {
         .menuPicture {
@@ -52,7 +52,7 @@
                 width: 100%;
                 background-size: cover;
                 margin: 0px;
-                box-shadow: inset 0 0 0 1000px rgba(1,0,0,.2);
+                box-shadow: inset 0 0 0 1000px rgba(1, 0, 0, .2);
                 h3 {
                     font-size: 35px;
                     margin: 0px;
@@ -60,13 +60,12 @@
                     color: $mywhite;
                     pointer-events: none;
                     position: relative;
-                    top:15px;
-                    left:15px;
+                    top: 15px;
+                    left: 15px;
                 }
-                &:hover{
+                &:hover {
                     box-shadow: 0 0 50px #ccc;
                 }
-                
             }
         }
         a {
@@ -117,8 +116,11 @@
             }
         }
     }
-    .infoButton{
-        border-top: 7px dotted #000;
-	box-shadow: inset 0 3px 0 0 #000, 0 -3px 0 0 #000;
+    .borderBox {
+        margin: 20px 0px;
+        background-color: $hblack;
+        border-top: 7px dotted $golden;
+        border-bottom: 7px dotted $golden;
+        box-shadow: inset 0 -1px 0 0 $golden, inset 0 1px 0 0 $golden, 0 1px 0 0 $golden, 0 -1px 0 0 $golden;
     }
 }
