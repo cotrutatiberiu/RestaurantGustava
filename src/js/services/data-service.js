@@ -167,6 +167,8 @@ export class DataService {
       // h4NutritionalTitle.style.color="white";
       modalContentElement.setAttribute("class","modal-content");
       modalContentElement.setAttribute("accesskey",index.name);
+      spanElement.setAttribute("class","spana");
+      spanElement.setAttribute("accesskey",index.name);
 
       //Assign element content
 
