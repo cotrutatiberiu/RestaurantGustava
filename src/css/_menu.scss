@@ -25,6 +25,22 @@
     }
     #leftList {
         list-style-type: none;
+        li{
+            margin: 50px 0px;
+        a{
+            font-size: 25px;
+            color: $mywhite;
+            font-family: $secondfont;
+            background-color: $hblack;
+            border: 2px solid $golden;
+            text-decoration: none;
+            padding: 7px;
+            box-shadow: inset 0 0 0 1000px rgba(1,0,0,.2);
+            &:hover{
+                box-shadow: 0 0 50px #ccc;
+            }
+        }
+    }
     }
     #menupictures {
         .menuPicture {
@@ -100,5 +116,9 @@
                 }
             }
         }
+    }
+    .infoButton{
+        border-top: 7px dotted #000;
+	box-shadow: inset 0 3px 0 0 #000, 0 -3px 0 0 #000;
     }
 }
