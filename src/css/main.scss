@@ -1,8 +1,7 @@
 @import "colors";
 @import "fonts";
 @import "menu";
-
-
+@import "contact";
 
 #restaurantImageContainer {
   background-image: linear-gradient(
@@ -34,14 +33,13 @@
       a {
         color: $mywhite;
         text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
-        0 -0.06em black;
+          0 -0.06em black;
       }
     }
   }
   #presentation {
     text-align: center;
     color: $mywhite;
-
     h1 {
       font-family: crystal;
       font-size: 100px;
