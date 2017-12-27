@@ -4,176 +4,194 @@
 //     border:1px solid red;
 //     }
 #menuBody {
-  background-image: url("/src/images/menutable.jpg");
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  #menucontainer {
+    background-image: url("/src/images/menutable.jpg");
+    background-size: cover;
     height: 100%;
     width: 100%;
-    .row {
-      margin: 0px;
-    }
-    .header {
-      .brandlogo {
-        font-family: crystal;
-        font-size: 50px;
-        margin-top: 30px;
-        color: $mywhite;
-        text-decoration: underline;
-      }
-      .navbar {
-        background-color: transparent;
-        background: transparent;
-        border-color: transparent;
-      }
-      li {
-        font-family: $secondfont;
-        font-size: 15px;
-        a {
-          color: $mywhite;
-          text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
-            0 -0.06em black;
+    #menucontainer {
+        height: 100%;
+        width: 100%;
+        .row {
+            margin: 0px;
         }
-      }
-    }
-    #leftList {
-      list-style-type: none;
-      li {
-        margin: 50px 0px;
-        a {
-          font-size: 25px;
-          color: $mywhite;
-          font-family: $secondfont;
-          background-color: $hblack;
-          border: 2px solid $golden;
-          text-decoration: none;
-          padding: 7px;
-          box-shadow: inset 0 0 0 1000px rgba(1, 0, 0, 0.2);
-          &:hover {
-            box-shadow: 0 0 50px #ccc;
-          }
+        .header {
+            .brandlogo {
+                font-family: crystal;
+                font-size: 50px;
+                margin-top: 30px;
+                color: $mywhite;
+                text-decoration: underline;
+            }
+            .navbar {
+                background-color: transparent;
+                background: transparent;
+                border-color: transparent;
+            }
+            li {
+                font-family: $secondfont;
+                font-size: 15px;
+                a {
+                    color: $mywhite;
+                    text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black, 0 -0.06em black;
+                }
+            }
         }
-      }
+        #leftList {
+            list-style-type: none;
+            li {
+                margin: 50px 0px;
+            }
+            a {
+                font-size: 25px;
+                color: $mywhite;
+                font-family: $secondfont;
+                background-color: $hblack;
+                border: 2px solid $golden;
+                text-decoration: none;
+                padding: 7px;
+                box-shadow: inset 0 0 0 1000px rgba(1, 0, 0, 0.2);
+                &:hover {
+                    box-shadow: 0 0 50px #ccc;
+                }
+            }
+        }
     }
     #menupictures {
-      .menuPicture {
-        height: 100%;
-        padding: 0px;
-        border: 5px solid $golden;
-        .windowP {
-          height: 100%;
-          width: 100%;
-          background-size: cover;
-          margin: 0px;
-          box-shadow: inset 0 0 0 1000px rgba(1, 0, 0, 0.2);
-          h3 {
-            font-size: 35px;
-            margin: 0px;
-            font-family: $secondfont;
-            color: $mywhite;
-            pointer-events: none;
-            position: relative;
-            top: 15px;
-            left: 15px;
-          }
-          &:hover {
-            box-shadow: 0 0 50px #ccc;
-          }
+        .menuPicture {
+            height: 100%;
+            padding: 0px;
+            border: 5px solid $golden;
+            .windowP {
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                margin: 0px;
+                box-shadow: inset 0 0 0 1000px rgba(1, 0, 0, 0.2);
+                h3 {
+                    font-size: 35px;
+                    margin: 0px;
+                    font-family: $secondfont;
+                    color: $mywhite;
+                    pointer-events: none;
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                }
+                &:hover {
+                    box-shadow: 0 0 50px #ccc;
+                }
+            }
         }
-      }
-      a {
-        text-decoration: none;
-      }
+        a {
+            text-decoration: none;
+        }
     }
     /* The Modal (background) */
     .modal {
-      color: $mywhite;
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      /* Stay in place */
-      z-index: 1;
-      /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%;
-      /* Full width */
-      height: 100%;
-      /* Full height */
-      overflow: auto;
-      /* Enable scroll if needed */
-      background-color: rgb(0, 0, 0);
-      /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.4);
-      /* Black w/ opacity */
-      /* Modal Content/Box */
-      .modal-content {
-        background-color: $myblack;
-        margin: 15% auto;
-        /* 15% from the top and centered */
-        padding: 20px;
-        border: 3px solid $golden;
-        width: 80%;
-        /* Could be more or less, depending on screen size */
-        /* The Close Button */
-        .close {
-          color: rgb(3, 3, 117);
-          float: right;
-          font-size: 40px;
-          font-weight: bold;
-          &:hover,
-          &:focus {
-            color: $mywhite;
-            text-decoration: none;
-            cursor: pointer;
-          }
+        color: $mywhite;
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: $myblack;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 3px solid $golden;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+            /* The Close Button */
+            .close {
+                color: rgb(3, 3, 117);
+                float: right;
+                font-size: 40px;
+                font-weight: bold;
+                &:hover,
+                &:focus {
+                    color: $mywhite;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+            h3 {
+                font-family: $secondfont;
+                margin-top: 0px;
+            }
+            h4 {
+                font-family: $thirdfont;
+            }
         }
-        h3 {
-          font-family: $secondfont;
-          margin-top: 0px;
-        }
-        h4 {
-          font-family: $thirdfont;
-        }
-      }
     }
     .borderBox {
-      color: $mywhite;
-      margin: 20px 0px;
-      background-color: $hblack;
-      border-top: 7px dotted $golden;
-      border-bottom: 7px dotted $golden;
-      box-shadow: inset 0 -1px 0 0 $mywhite, inset 0 1px 0 0 $mywhite,
-        0 1px 0 0 $mywhite, 0 -1px 0 0 $mywhite;
-      a {
         color: $mywhite;
-        text-decoration: none;
-        font-family: $secondfont;
-      }
-      h5 {
-        font-weight: bold;
-      }
-      p {
-        font-family: $thirdfont;
-      }
+        margin: 20px 0px;
+        background-color: $hblack;
+        border-top: 7px dotted $golden;
+        border-bottom: 7px dotted $golden;
+        box-shadow: inset 0 -1px 0 0 $mywhite, inset 0 1px 0 0 $mywhite, 0 1px 0 0 $mywhite, 0 -1px 0 0 $mywhite;
+        a {
+            color: $mywhite;
+            text-decoration: none;
+            font-family: $secondfont;
+        }
+        h5 {
+            font-weight: bold;
+        }
+        p {
+            font-family: $thirdfont;
+        }
     }
     #sorting {
-      margin-bottom: 40px;
-      #sortStyle {
-        background-color: $hblack;
-        padding: 10px;
-        color: $mywhite;
-        border: 3px solid $golden;
-        border-radius: 30px;
-      }
+        margin-bottom: 40px;
+        #sortStyle {
+            background-color: $hblack;
+            padding: 10px;
+            color: $mywhite;
+            border: 3px solid $golden;
+            border-radius: 30px;
+        }
     }
-  }
+}
 
-  .container-fluid {
+.container-fluid {
     padding: 0px;
-  }
-  .col-lg-8 {
+}
+
+.col-lg-8 {
     padding: 0px;
+}
+
+@media (max-width: 991px) {
+    #sorting {
+        text-align: center;
+    }
+    #leftMenu {
+        text-align: center;
+        li{
+          margin:30px 0px !important;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+  #sortStyle{
+    border-radius: 0px !important;
+    display: block;
   }
 }
